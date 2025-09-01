@@ -1,0 +1,22 @@
+# Your current entries
+.env
+composer.lock
+vendor/
+.vscode/
+
+# Configuration files
+sftp.json
+config.php
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Backup files
+*.bak
+*.backup
