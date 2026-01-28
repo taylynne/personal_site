@@ -137,12 +137,9 @@
                     <img src="assets/images/weather_analysis.jpg" class="project-image" alt="Screenshot of the weather analysis project">
                     <h3>CodeYou Capstone Project</h3>
                     <p><a href="https://github.com/taylynne/code_you_capstone">GitHub</a></br>
-                        This is my capstone project I created for the <a href="https://code-you.org/">CodeYou</a>
-                        program.
-                        </br>
-                        I took data available from NOAA to analyze the weather trends for Lexington, KY.
-                        I sifted through the data using Python, cleaned it up and saved the data as database.
-                        I created some charts with the findings using the SQL database I set up.
+                        This was my capstone project for the <a href="https://code-you.org/">CodeYou</a> program, where I analyzed weather trends for
+                        Lexington, KY using publicly available NOAA data. I processed and cleaned the data with Python,
+                        stored it in a SQL database, and created charts to visualize patterns and findings.
                     </p>
                 </div>
 
@@ -150,7 +147,8 @@
                     <img src="assets/images/client_area.jpg" class="project-image" alt="Screenshot of the client area project">
                     <h3>Webhosting Client Area & Integration</h3>
                     <p>
-                        I worked with a web hosting company to update their client area per their specifications, using a TALL stack and WHMCS integrations.
+                        I worked with a web hosting company to update their client area according to their specifications,
+                        using the TALL stack with custom WHMCS integrations to improve functionality and user workflows.
                     </p>
                 </div>
 
@@ -158,8 +156,10 @@
                     <img src="assets/images/forkland-site.jpg" class="project-image" alt="Screenshot of the Forkland Community Center website.">
                     <h3>Forkland Community Website</h3>
                     <p>
-                        I volunteered to rebuild the website for the Forkland Community. This is a small community in rural Kentucky, and they strive to keep touch with their roots and community.
-                        They are also interested in genelogical research and history, and have a large library of historical documents available to the public. The website includes an event calendar, a board member area, past newsletters & newsletter sign up, and a contact area.
+                        I volunteered to rebuild the Forkland Community website for a small rural community in Kentucky. The site
+                        features a public event calendar, an internal board member area for to-dos and communication, and general
+                        information about community events and activities.
+
                     </p>
                 </div>
             </div>
@@ -191,8 +191,7 @@
     </main>
 
     <footer>
-        <p>Email me <a href="mailto:contact@taylynne.me">here!</a></p>
-        <p>&copy; <?php echo date('Y'); ?> Taylynne Britton</p>
+        <p style="padding-top: 2rem; padding-bottom: 1.5rem;">&copy; <?php echo date('Y'); ?> Taylynne Britton</p>
     </footer>
 </body>
 
