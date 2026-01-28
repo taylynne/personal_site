@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <title>Taylynne's Portfolio</title>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -134,7 +134,7 @@
             <h2>Recent Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="assets/images/weather_analysis.png" class="project-image" alt="Screenshot of the weather analysis project">
+                    <img src="assets/images/weather_analysis.jpg" class="project-image" alt="Screenshot of the weather analysis project">
                     <h3>CodeYou Capstone Project</h3>
                     <p><a href="https://github.com/taylynne/code_you_capstone">GitHub</a></br>
                         This is my capstone project I created for the <a href="https://code-you.org/">CodeYou</a>
@@ -147,10 +147,19 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="assets/images/client_area.png" class="project-image" alt="Screenshot of the client area project">
+                    <img src="assets/images/client_area.jpg" class="project-image" alt="Screenshot of the client area project">
                     <h3>Webhosting Client Area & Integration</h3>
                     <p>
                         I worked with a web hosting company to update their client area per their specifications, using a TALL stack and WHMCS integrations.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <img src="assets/images/forkland-site.jpg" class="project-image" alt="Screenshot of the Forkland Community Center website.">
+                    <h3>Forkland Community Website</h3>
+                    <p>
+                        I volunteered to rebuild the website for the Forkland Community. This is a small community in rural Kentucky, and they strive to keep touch with their roots and community.
+                        They are also interested in genelogical research and history, and have a large library of historical documents available to the public. The website includes an event calendar, a board member area, past newsletters & newsletter sign up, and a contact area.
                     </p>
                 </div>
             </div>
@@ -173,8 +182,10 @@
                     <input type="text" name="subject" placeholder="Subject" class="contact-input" required>
                     <textarea name="message" placeholder="Message" class="contact-message" required></textarea>
                     <span id="status-message"></span><br>
+                    <div class="g-recaptcha" data-sitekey="6Lf1HbsrAAAAAOn14SybSCh8yCpZj2QjX8Ro1U-S"></div>
                     <button class="contact-btn" type="submit">Submit</button>
                 </form>
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </div>
         </section>
     </main>
@@ -201,6 +212,10 @@
             })
             .then(response => response.text())
             .then(data => {
+                if (data.includes('Error')) {
+                    throw new Error(data);
+                }
+
                 Toastify({
                     text: "Message sent successfully! I will get back to you as soon as possible.",
                     duration: 3000,
@@ -215,6 +230,10 @@
                 document.getElementById('status-message').textContent = "Message sent successfully! I will get back to you as soon as possible.";
                 document.getElementById('status-message').style.color = "green";
                 this.reset();
+                // Reset reCAPTCHA
+                if (typeof grecaptcha !== 'undefined') {
+                    grecaptcha.reset();
+                }
             })
             .catch(error => {
                 document.getElementById('status-message').textContent = "Message failed to send. Please try again or email me directly.";
@@ -230,6 +249,10 @@
                         background: "linear-gradient(to right,rgb(124, 14, 14),rgb(199, 19, 19))",
                     }
                 }).showToast();
+                // Reset reCAPTCHA on error
+                if (typeof grecaptcha !== 'undefined') {
+                    grecaptcha.reset();
+                }
             });
     });
 </script>

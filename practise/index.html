@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #1C1C1C;
+            margin: 0;
+            padding: 2em;
+            font-family: 'Karla', sans-serif;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        .subtitle {
+            color: #888;
+            margin-bottom: 2em;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .project-link {
+            display: block;
+            background-color: #1F2937;
+            padding: 1.5em;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.2s;
+        }
+
+        .project-link:hover {
+            background-color: #2a3a4d;
+        }
+
+        .project-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #4ADF86;
+            margin-bottom: 0.3em;
+        }
+
+        .project-desc {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Practice Projects</h1>
+        <p class="subtitle">A collection of small projects for learning and experimentation.</p>
+
+        <div class="projects">
+            <a href="password-generator/" class="project-link">
+                <div class="project-title">Password Generator</div>
+                <div class="project-desc">Generate random secure passwords</div>
+            </a>
+            <!-- Add more projects here -->
+        </div>
+    </div>
+</body>
+
+</html>

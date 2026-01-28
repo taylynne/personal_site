@@ -309,6 +309,12 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin: .5rem 0 1rem 0;
+}
+
 .contact-btn:hover {
     background: #3d0e61;
     transform: translateY(-2px);
